@@ -1,0 +1,35 @@
+body, html {
+    height: 100%;
+    font-family: 'Trebuchet MS', sans-serif;
+    overflow: hidden;
+}
+
+.App {
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.MuiAppBar-colorDefault {
+    background-image: linear-gradient(to right, #0A50AA , #1888d5);
+    height: 60px;
+}
+
+.profile-button {
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    transition: filter 0.3s;
+}
+
+.profile-button:hover {
+    filter: opacity(0.7);
+    cursor: pointer;
+}

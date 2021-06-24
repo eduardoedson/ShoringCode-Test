@@ -1,6 +1,11 @@
+import Header from '../components/Header'
+import '../assets/css/Global.css'
+
 const Index = () => {
 	return (
-		<div className="App">Index</div>
+		<div className="App">
+			<Header />
+		</div>
 	);
 }
 
