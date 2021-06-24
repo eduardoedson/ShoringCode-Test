@@ -33,3 +33,32 @@ body, html {
     filter: opacity(0.7);
     cursor: pointer;
 }
+
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    align-items: center;
+    padding: 10px;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+}
+
+.profile-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 13px 0;
+    background: -webkit-linear-gradient(#0A50AA, #1888d5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.profile-description {
+    text-align: justify;
+    font-weight: 400;
+    line-height: 1.45;
+}

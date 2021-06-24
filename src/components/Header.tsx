@@ -36,7 +36,7 @@ const Header = () => {
 					onMouseLeave={handleProfileClose}
 					className="profile-button"
 				>
-					Hover with a Popover.
+					My Profile
 				</Typography>
 				<Popover
 					id="profile-popover"
