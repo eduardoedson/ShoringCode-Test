@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { TextField, FormControl, InputLabel, Select, MenuItem, Button } from '@material-ui/core'
-import SearchIcon from '@material-ui/icons/Search';
+import SearchIcon from '@material-ui/icons/Search'
 import API from '../services/Api'
+import { Link } from 'react-router-dom'
 
 const Content = () => {
     const [city, setCity] = useState<string>('')
@@ -26,10 +27,6 @@ const Content = () => {
         const results = await API.get(url).then(res => { return res.data } ).catch(() => [])
         setResultApi(results)
     }
-
-    useEffect(() => {
-        console.log(resultApi)
-    }, [resultApi])
 
 	return (
 		<div className="content">
@@ -64,7 +61,7 @@ const Content = () => {
                         {resultApi.data?.map((result: any) => {
                             return (
                                 <tr key={result.id}>
-                                    <td><a href="#">{result.name}</a></td>
+                                    <td><Link to={`/${result.id}`}>{result.name}</Link></td>
                                     <td>{result.country} - {result.countryCode}</td>
                                     <td>{result.region} - {result.regionCode}</td>
                                     <td className="coords">{result.latitude?.toFixed(5)}</td>

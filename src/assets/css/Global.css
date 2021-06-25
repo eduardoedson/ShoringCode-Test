@@ -138,3 +138,24 @@ body, html {
 .table-content table tbody tr td a {
     text-decoration: none;
 }
+
+.table-detail {
+    font-size: 15px;
+}
+
+.table-detail tr {
+    height: 25px;
+}
+
+.table-detail tr th {
+    padding: 8px;
+    padding-left: 30px;
+    text-align: right;
+    background-image: linear-gradient(to right, #0A50AA, #1888d5);
+    color: white;
+    border-radius: 4px;
+}
+
+.table-detail tr td {
+    padding-left: 6px;
+}
