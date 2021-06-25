@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import API from '../services/Api'
@@ -29,6 +29,8 @@ const Detail = () => {
 			<Header />
 
 			<div className="content">
+				<button className="back-btn-detail"><Link to={'/'}>Back</Link></button>
+
 				{city && Object.keys(city).length > 0 ? 
 					<table className="table-detail">
 						<tr>

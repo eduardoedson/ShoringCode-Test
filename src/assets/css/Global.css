@@ -159,3 +159,29 @@ body, html {
 .table-detail tr td {
     padding-left: 6px;
 }
+
+.perfil-popover-close:hover {
+    z-index: 9999;
+    cursor: pointer;
+}
+
+.back-btn-detail a {
+    text-decoration: none;
+    color: white;
+}
+
+.back-btn-detail {
+    background-image: linear-gradient(to right, #0A50AA, #1888d5);
+    margin-bottom: 10px;
+    margin-left: 1px;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 6px 22px;
+    border-radius: 3px;
+    text-transform: capitalize;
+}
+
+.back-btn-detail:hover {
+    cursor: pointer;
+}
