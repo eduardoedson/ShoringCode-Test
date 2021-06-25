@@ -10,11 +10,13 @@ interface ParamTypes {
 
 const Detail = () => {
 	const { id }  = useParams<ParamTypes>()
-	const [city, setCity] = useState({})
+	const [city, setCity] = useState<any>(null)
 
 	const getCityData = async () => {
-		const url : string = `http://geodb-free-service.wirefreethought.com/v1/geo/cities/${id}`
-        await API.get(url).then(res => setCity(res.data.data))
+		if(id) {
+			const url : string = `http://geodb-free-service.wirefreethought.com/v1/geo/cities/${id}`
+        	await API.get(url).then(res => setCity(res.data.data)).catch(() => setCity(null))
+		}
 	}
 
 	useEffect(() => {
@@ -27,7 +29,7 @@ const Detail = () => {
 			<Header />
 
 			<div className="content">
-				{Object.keys(city).length > 0 ? 
+				{city && Object.keys(city).length > 0 ? 
 					<table className="table-detail">
 						<tr>
 							<th>ID</th>
